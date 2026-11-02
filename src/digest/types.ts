@@ -13,6 +13,8 @@ export type DigestRow = {
   runs: number;
   /** Number of lines with status `retry`. */
   retries: number;
+  /** Number of lines with status `fail`. (`runs - retries - fails` = ok lines.) */
+  fails: number;
   /** Status of the latest line (by `at`) for this job. */
   lastStatus: RunStatus;
   /** `error` of the latest line that had one; `null` if none did (rendered as `—`). */
